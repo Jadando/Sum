@@ -9,17 +9,20 @@
         align-items: center;
         padding: 12px;
     }
+    .navbar.active {
+        background-color: #3b3b3b; /* Cor do navbar quando o toggle estiver ativo */
+    }
 
     .logo {
         display: inline-block;
-        /* Garante que a logo tenha um layout de bloco inline */
         order: 2;
-        margin-right: 62%;
-        
+        margin-right: 85%;
     }
 
     .menu {
         display: none;
+        background-color: #3b3b3b;
+        z-index: 1;
     }
 
     .menu li {
@@ -36,7 +39,7 @@
     .menu li::after {
         content: "";
         position: absolute;
-        bottom: -43px;
+        bottom: -25px;
         left: 0;
         width: 90%;
         height: 2px;
@@ -44,7 +47,8 @@
     }
 
     .menu li a {
-        font-family: 'Poppins SemiBold', sans-serif;
+        font-family: var(--font-primaria);
+        font-weight: 600;
         font-size: 24px;
         display: inline-block;
         color: #fff;
@@ -52,8 +56,8 @@
         /* Para a âncora ocupar apenas o espaço do conteúdo */
     }
 
-    .menu li img {
-        width: 15px;
+    .seta {
+        width: 10px;
         position: absolute;
         right: 0;
         top: 50%;
@@ -66,6 +70,7 @@
         order: 1;
         display: block;
         cursor: pointer;
+        z-index: 1;
     }
 
     .bar {
@@ -74,16 +79,16 @@
         background-color: #ECECED;
         margin: 5px 0;
         transition: 0.4s;
-        border-radius: 4px;
+        border-radius: 2px;
     }
 
     .baralt {
         width: 26px;
         height: 5px;
-        background-color: #000;
+        background-color: #ECECED;
         margin: 5px 0;
         transition: 0.4s;
-        border-radius: 4px;
+        border-radius: 2px;
     }
 
     .change .bar:nth-child(1) {
@@ -107,8 +112,27 @@
         top: 70px;
         left: 0;
         width: 100%;
-        /* background-color: #ffffff; */
         padding: 20px;
+    }
+
+
+    .btn-cta {
+        display: none;
+    }
+
+    .btn-cta-mobile {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        font-size: 15px;
+        width: 200px;
+        height: 40px;
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--cor-botao);
+        color: #fff;
+        order: 3;
+        margin-left: -45%;
     }
 
     /* Adicione estilos específicos para telas pequenas aqui */
@@ -116,7 +140,82 @@
 
 /* Estilos para tablets */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        /* background-color: #333; */
+        overflow: hidden;
+        text-align: right;
+        margin-top: 20px;
+        margin-right: 12px;
+        position: relative;
+        z-index: 1;
+    }
 
+    .navbar .logo {
+        float: left;
+        margin-left: 12px;
+        /* Coloque a logo como um elemento flutuante à esquerda */
+    }
+
+    .navbar .logo img {
+        height: 67px;
+        width: 76px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .navbar li {
+        display: inline-block;
+        position: relative;
+    }
+
+    .navbar li a {
+        font-family: var(--font-primaria);
+        font-weight: 500;
+        font-size: 15px;
+        display: block;
+        color: #ECECED;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .navbar li:not(:last-child) a:hover::before {
+        content: "";
+        position: absolute;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        left: 0;
+        bottom: -4px;
+        width: 40px;
+        height: 2px;
+        background-color: #7F72FF;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .btn-cta {
+        width: 130px;
+        display: inline-block;
+        font-family: var(--font-primaria);
+        font-weight: 600 !important;
+        padding: 10px 20px;
+        background-color: var(--cor-botao);
+        color: #ECECED;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .seta,
+    .btn-cta-mobile {
+        display: none;
+    }
 }
 
 /* Estilos para telas maiores, como desktops */
@@ -153,11 +252,12 @@
     .navbar li {
         display: inline-block;
         position: relative;
-        margin-right: 75px;
+        margin-right: 15px;
     }
 
     .navbar li a {
-        font-family: 'Poppins Medium', sans-serif;
+        font-family: var(--font-primaria);
+        font-weight: 500;
         font-size: 20px;
         display: block;
         color: #ECECED;
@@ -165,10 +265,6 @@
         padding: 14px 16px;
         text-decoration: none;
         position: relative;
-    }
-
-    .navbar li a:hover {
-        color: #7F72FF;
     }
 
     .navbar li:not(:last-child) a:hover::before {
@@ -185,26 +281,28 @@
         transition: all 0.3s ease;
     }
 
+    .navbar li a:hover {
+        color: #7F72FF;
+    }
+
     .btn-cta {
-        width: 165px;
+        width: 200px;
         display: inline-block;
-        font-family: 'Poppins Medium', sans-serif;
+        font-family: var(--font-primaria);
+        font-weight: 600;
         padding: 10px 20px;
-        /* Ajuste conforme necessário */
-        background-color: #6C63FF;
-        /* Cor de fundo do botão */
+        background-color: var(--cor-botao);
         color: #ECECED;
         text-decoration: none;
         border-radius: 5px;
+        border: none;
+        font-size: 20px;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     }
 
-    .btn-cta:hover {
-        color: #ECECED !important;
-        ;
-    }
-
-    .seta {
+    .seta,
+    .btn-cta-mobile {
         display: none;
     }
+
 }

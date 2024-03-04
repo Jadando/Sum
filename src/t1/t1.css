@@ -1,47 +1,191 @@
-.fundo {
-    position: relative;
-    /* Precisamos definir a posição como relativa para os pseudo-elementos funcionarem corretamente */
-    width: 100%;
-    height: 1000px;
-    top: 0;
-    margin-top: -7.6%;
-    z-index: -1;
-    overflow: hidden;
-    /* Para garantir que os pseudo-elementos não afetem o layout */
+/* Estilos para telas pequenas, como smartphones */
+@media only screen and (min-width:320px) and (max-width: 600px) {
+    .fundo {
+        position: relative;
+        width: 100%;
+        height: 115vh;
+        margin-top: -32%;
+        overflow: hidden;
+    }
+
+    .fundo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/fundo.jpg');
+        opacity: 0.69;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto {
+        text-align: center;
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        color: white;
+        font-size: 45px;
+        margin-top: 70%;
+        margin-right: 10%;
+        margin-left: 10%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtexto {
+        font-family: var(--font-secundaria);
+        font-weight: 500;
+        color: white;
+        font-size: 16px;
+        margin-right: 10%;
+        margin-left: 10%;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-cta-t1 {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        font-size: 20px;
+        width: 150px;
+        height: 70px;
+        padding: 10px 5px 10px 5px;
+        border-radius: 15px;
+        border: none;
+        background-color: var(--cor-botao);
+        color: #fff;
+        order: 3;
+        margin-top: 40px;
+        margin-left: 32%;
+    }
 }
 
-.fundo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/fundo.jpg');
-    opacity: 0.7;
-    z-index: -1;
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .fundo {
+        position: relative;
+        width: 100%;
+        height: 130vh;
+        margin-top: -16%;
+        overflow: hidden;
+    }
+
+    .fundo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/fundo.jpg');
+        opacity: 0.69;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        color: white;
+        font-size: 60px;
+        margin-top: 35%;
+        margin-right: 25%;
+        margin-left: 10%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtexto {
+        font-family: var(--font-secundaria);
+        font-weight: 500;
+        color: white;
+        font-size: 20px;
+        margin-right: 40%;
+        margin-left: 10%;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-cta-t1 {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        font-size: 25px;
+        width: 200px;
+        height: 80px;
+        padding: 10px 5px 10px 5px;
+        border-radius: 15px;
+        border: none;
+        background-color: var(--cor-botao);
+        color: #fff;
+        order: 3;
+        margin-top: 20px;
+        margin-left: 17%;
+    }
 }
 
-h1 {
-    font-family: 'Poppins SemiBold', sans-serif;
-    color: white;
-    font-size: 65px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
-    margin-right: 55%;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+/* Estilos para telas maiores, como desktops */
+@media only screen and (min-width: 1025px) {
+    .fundo {
+        position: relative;
+        width: 100%;
+        height: 130vh;
+        margin-top: -10%;
+        overflow: hidden;
+    }
 
-h1 span {
-    display: block;
-}
+    .fundo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/fundo.jpg');
+        opacity: 0.69;
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-p {
-    font-family: 'Roboto SemiBold', sans-serif;
-    color: #ECECED;
-    font-size: 25px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-    margin-left: 10%;
+    .texto {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        color: white;
+        font-size: 105px;
+        margin-top: 12%;
+        margin-right: 25%;
+        margin-left: 10%;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .subtexto {
+        font-family: var(--font-secundaria);
+        font-weight: 500;
+        color: white;
+        font-size: 26px;
+        margin-top: -50px;
+        margin-right: 40%;
+        margin-left: 10%;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-cta-t1 {
+        font-family: var(--font-primaria);
+        font-weight: 600;
+        font-size: 32px;
+        width: 300px;
+        height: 100px;
+        padding: 10px 5px 10px 5px;
+        border-radius: 15px;
+        border: none;
+        background-color: var(--cor-botao);
+        color: #fff;
+        order: 3;
+        margin-top: 20px;
+        margin-left: 17%;
+    }
 }
