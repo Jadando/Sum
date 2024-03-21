@@ -42,7 +42,7 @@ function slider() {
                                 <img id='slider'
                                     src={item.image}
                                     alt='Slider'
-                                    className='slider-item'
+                                    className='slider-item select-none'
                                 />
                             </SwiperSlide>
                         ))}
@@ -71,7 +71,7 @@ function slider() {
                                 <img
                                     src={item.image}
                                     alt='Slider'
-                                    className='slider-item'
+                                    className='slider-item select-none'
                                 />
                             </SwiperSlide>
                         ))}
@@ -100,7 +100,7 @@ function slider() {
                                 <img
                                     src={item.image}
                                     alt='Slider'
-                                    className='slider-item'
+                                    className='slider-item select-none'
                                 />
                             </SwiperSlide>
                         ))}

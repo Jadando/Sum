@@ -11,9 +11,9 @@ const frases: React.FC<FresesProps> = ({ frase, botao }) => {
         window.open('https://wa.me/5513982077243','_blank')
      }
     return (
-        <div className='frase'>
+        <div className='flex flex-col items-center'>
             <h1 className='frases' dangerouslySetInnerHTML={{ __html: frase }}></h1>
-            <button className='btn-cta-frases' onClick={contato}>{botao}</button>
+            <button className=' bg-purpleBtn text-nowrap w-72 h-16 rounded-lg border-none font-poppins text-white font-bold text-lg cursor-pointer' onClick={contato}>{botao}</button>
         </div>
     )
 }

@@ -10,6 +10,8 @@ export default {
         'purpleBtn': "#6C63FF"
       }, fontFamily:{
         'poppins': 'Poppins, sans-serif'
+      }, spacing:{
+        '1/6':'11%'
       }
     },
   },
