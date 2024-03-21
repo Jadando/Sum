@@ -13,8 +13,10 @@ function t1() {
                 <p className='subtexto'>
                     Serviços especializados para impulsionar sua presença digital
                 </p>
-                <button className='btn-cta-t1' onClick={contato}>Destaque-se</button>
+                <button className='bg-purpleBtn w-64 h-10 rounded-lg border-none relative left-1/4 font-poppins text-white font-medium text-lg' onClick={contato}>Destaque-se<i className="icofont-swoosh-right"></i></button>
             </div>
+
+            
 
         </>
     )

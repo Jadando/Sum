@@ -19,5 +19,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Frases frase='Estamos aqui para tornar seus <strong>resultados mais eficazes!</strong>' botao='Converse conosco' />
     <About />
     <Footer/>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

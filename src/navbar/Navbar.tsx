@@ -43,7 +43,7 @@ function Navbar() {
                         <img src={seta} className="seta" alt="Sobre Nós" />
                         <a href="https://wa.me/5513982077243" target='#'>Contato</a>
                     </li>
-                    <button className='btn-cta' onClick={() => contato()}>Destaque-se</button>
+                    <button className='btn-cta cursor-pointer' onClick={() => contato()}>Destaque-se</button>
                 </ul>
             </nav>
 
