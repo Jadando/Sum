@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "meu-projeto-cfb2f"
-  }
+    "default": "meu-projeto-cfb2f",
+    "dist": "social-ac718"
+  },
+  "targets": {},
+  "etags": {}
 }

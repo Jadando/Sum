@@ -6,6 +6,7 @@ import Slider from './slider/slider.tsx'
 import Frases from './frases/frases.tsx'
 import About from './about/about.tsx'
 import Footer from './footer/footer.tsx'
+import Form from './form/Form.tsx'
 
 
 import './index.css'
@@ -19,5 +20,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Frases frase='Estamos aqui para tornar seus <strong>resultados mais eficazes!</strong>' botao='Converse conosco' />
     <About />
     <Footer/>
+    <Form/>
   </React.StrictMode>
 )
